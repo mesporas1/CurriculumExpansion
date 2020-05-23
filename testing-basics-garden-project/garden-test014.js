@@ -22,4 +22,4 @@ describe("Garden tests", function () {
    });
 });
 
-// Write an assert statement that checks if the length of fruitTrees in myGarden is at most 5.
+// After the `for` loop, use the `isAtMost` method to write an assert statement that checks if the length of `fruitTrees` in `myGarden` is at most 5.

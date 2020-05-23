@@ -9,9 +9,9 @@ describe("Garden tests", function () {
    });
 });
 
-/* Great! Now we can group tests into test blocks with "describe"
-   Let's test against more requirements.
-   A garden should be able to add different kinds of plants. Let's start with Fruit Trees!
-   Import "FruitTree" from the "FruitTree.js" file
-   Declare a variable myFruitTree and assign it to a new FruitTree with "Strawberry" as a parameter inside of the "describe" block
+/* 
+  Great! Now we can group tests into test blocks with `describe`.
+  Let's test against more requirements.
+  A garden should be able to add different kinds of plants. Let's start with Fruit Trees!
+  Import `FruitTree` from the `FruitTree.js` file in `src`.
 */

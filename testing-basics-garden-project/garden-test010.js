@@ -15,6 +15,7 @@ describe("Garden tests", function () {
    })
 });
 
-/*  Add myFruitTree to myGarden in the "should be able to add fruit trees" test case
-    NOTE: Check out how FruitTrees are added to Gardens in the Garden.js file
-*/
+/*  
+  Add `myFruitTree` to `myGarden` in the `"should be able to add fruit trees"` test case.
+  NOTE: Check out how `FruitTrees` are added to `Garden`'s in the `Garden.js` file
+*/ 

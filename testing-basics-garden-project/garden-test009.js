@@ -11,6 +11,7 @@ describe("Garden tests", function () {
    });
 });
 
-/* Now, let's create a test case where the Garden should be able to add fruit trees
-   Define the test case with the string "should be able to add fruit trees" and pass in an empty function
+/* 
+  Now, let's create a test case where the `Garden` should be able to add fruit trees.
+  Define the test case with the string `"should be able to add fruit trees"` and pass in an empty function.
 */

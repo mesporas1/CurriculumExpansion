@@ -16,8 +16,9 @@ describe("Garden tests", function () {
    })
 });
 
-/*  Congrats! You have now made two test cases!
-    Let's create another test case called "should not allow more than 5 fruit trees"
-    This will correspond to the next requirement.
-    You don't need to implement the test yet.
+/*  
+  Congrats! You have now made two test cases!
+  Let's create another test case called `"should not allow more than 5 fruit trees"`.
+  This will correspond to the next requirement.
+  You don't need to implement the test yet.
 */

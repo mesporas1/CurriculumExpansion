@@ -15,10 +15,11 @@ describe("Garden tests", function () {
    })
 });
 
-/*  Great! Now that we added myFruitTree to myGarden.
-   We can do this using the "isAbove" assert method from Chai.
-   The method works like this:
-      assert.isAbove(a,b) // Checks if a > b
-   Write an assert using "isAbove" to check if the FruitTree was added to the Garden.
-   The assert should check if the length of fruitTrees in "myGarden" is greater than 0.
+/*  
+  Great! Now that we added `myFruitTree` to `myGarden`, we can write a test to make sure it's working.
+  We can do this using the `isAbove` assert method from Chai.
+  The method works like this:
+  `assert.isAbove(a, 2) // Checks if a > 2`
+  Write an assert using `isAbove` to check if the `FruitTree` was added to the `Garden`.
+  The assert should check if the length of `fruitTrees` in `myGarden` is greater than 0.
 */

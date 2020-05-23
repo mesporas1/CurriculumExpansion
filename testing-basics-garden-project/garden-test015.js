@@ -23,15 +23,17 @@ describe("Garden tests", function () {
    });
 });
 
-/* Our tests pass, but they are not independent of other tests
-   This can cause problems for future tests
-   We can setup what happens before each test using "beforeEach"
-   Use "beforeEach" to setup the myGarden variable for every test case
-   e.g.
-      describe("Tests", function(){
-         let initialVar
-         beforeEach(() => {
-            // setup code for initialVar
-         })
-      })
+/* 
+  Our tests pass, but they are not independent of other tests.
+  This can cause problems for future tests.
+  We can set up what happens before each test using the `beforeEach` hook.
+  Just below your `myGarden` variable, use `beforeEach` to set up the `myGarden` variable for every test case, for example:
+  ```
+  describe("Tests", function(){
+    let Plane
+    beforeEach(() => {
+      Plane = new Plane()
+    })
+  })
+  ```
 */

@@ -19,6 +19,7 @@ describe("Garden tests", function () {
    });
 });
 
-/* Now that we have the test, let's implement it.
-   Write a for loop that adds more than 5 myFruitTree objects to myGarden
+/* 
+  Now that we have the test, let's implement it.
+  Write a for loop that adds more than 5 `myFruitTree` objects to `myGarden`.
 */
