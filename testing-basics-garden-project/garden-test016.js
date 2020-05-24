@@ -28,4 +28,15 @@ describe("Garden tests", function () {
    });
 });
 
-// Next step not added yet. Result from previous file above.
+/*
+   Test blocks can be nested inside of other test blocks to better identify where problems may reside.
+   With our plane example, if I wanted to group `"Jet Plane Tests"` into `"Plane tests"`, I can write this:
+   ```
+      describe("Plane tests", function(){
+         describe("Jet Plane tests", function(){
+            // Your test cases
+         })
+      })
+   ```
+   Create a test block inside of `"Garden tests"` called  `"Garden with fruit trees"` with your fruit tree test cases.
+*/
