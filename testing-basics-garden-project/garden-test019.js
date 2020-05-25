@@ -1,5 +1,6 @@
 import { Garden } from "../src/Garden";
 import { FruitTree } from "../src/FruitTree";
+import { VegetablePlant } from "../src/VegetablePlant";
 const chai = require("chai");
 const assert = chai.assert;
 
@@ -15,7 +16,12 @@ describe("Garden tests", function () {
    });
    
    describe("Garden with fruit trees", function(){
-      let myFruitTree = new FruitTree("Strawberry");
+      let myFruitTree;
+
+      beforeEach(() => {
+         myFruitTree = new FruitTree("Strawberry");
+      });
+
    
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
@@ -32,5 +38,6 @@ describe("Garden tests", function () {
 });
 
 /*
-  Great! Let's add a `beforeEach` hook to set up the `myFruitTree` variable for each test case in the `"Garden with fruit trees"` tests
-*/ 
+   We can start organizing our next tests with another describe block!
+   Add a describe block under the `"Garden with fruit trees"` block called `"Garden with vegetable"` and pass in an empty function.
+*/

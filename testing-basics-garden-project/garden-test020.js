@@ -1,5 +1,6 @@
 import { Garden } from "../src/Garden";
 import { FruitTree } from "../src/FruitTree";
+import { VegetablePlant } from "../src/VegetablePlant";
 const chai = require("chai");
 const assert = chai.assert;
 
@@ -15,7 +16,12 @@ describe("Garden tests", function () {
    });
    
    describe("Garden with fruit trees", function(){
-      let myFruitTree = new FruitTree("Strawberry");
+      let myFruitTree;
+
+      beforeEach(() => {
+         myFruitTree = new FruitTree("Strawberry");
+      });
+
    
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
@@ -28,9 +34,12 @@ describe("Garden tests", function () {
          }
          assert.isAtMost(myGarden.fruitTrees.length, 5);
       });
-   }); 
+   });
+   describe("Garden with vegetable plants", function(){
+
+   })
 });
 
 /*
-  Great! Let's add a `beforeEach` hook to set up the `myFruitTree` variable for each test case in the `"Garden with fruit trees"` tests
-*/ 
+   Inside our new `describe` block, declare a variable `myVegetablePlant` and assign it to a new `VegetablePlant` with `"Cabbage"` as a parameter.
+*/

@@ -37,5 +37,7 @@ describe("Garden tests", function () {
 });
 
 /*
-  Result from previous test above.
-*/ 
+  The layout for the rest of the garden tests will be similar to what we have already implemented.
+  We can start testing against requirements for other `Plant` types.
+  Import `VegetablePlant` from the `VegetablePlant.js` file in `src`.
+*/
