@@ -41,10 +41,19 @@ describe("Garden tests", function () {
       beforeEach(() => {
          myVegetablePlant = new VegetablePlant("Cabbage");
       });
+
+      it("should be able to add vegetables", function () {
+         myGarden.addPlant(myVegetablePlant);
+         assert.isAbove(myGarden.vegetablePlants.length, 0);
+      });
+
+      it("should not allow more than 10 vegetable plants", function () {
+
+      });
    })
 });
 
 /*
-   Now, let's create a test case where the `Garden` should be able to add vegetable plants.
-   Define the test case with the string `"should be able to add vegetables"` and pass in an empty function.
+  Now that we have the test, let's implement it.
+  Write a for loop that adds more than 10 `myVegetablePlant` objects to `myGarden`.
 */

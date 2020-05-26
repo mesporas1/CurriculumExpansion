@@ -41,10 +41,14 @@ describe("Garden tests", function () {
       beforeEach(() => {
          myVegetablePlant = new VegetablePlant("Cabbage");
       });
+
+      it("should be able to add vegetables", function () {
+         myGarden.addPlant(myVegetablePlant);
+      });
    })
 });
 
 /*
-   Now, let's create a test case where the `Garden` should be able to add vegetable plants.
-   Define the test case with the string `"should be able to add vegetables"` and pass in an empty function.
+   Write an assert using `isAbove` to check if the `VegetablePlant` was added to the `Garden`.
+   The assert should check if the length of `vegetablePlants` in `myGarden` is greater than 0.
 */

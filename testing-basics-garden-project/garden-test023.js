@@ -14,15 +14,15 @@ describe("Garden tests", function () {
    it("should be able to create a Garden", function () {
       assert.instanceOf(myGarden, Garden);
    });
-   
-   describe("Garden with fruit trees", function(){
+
+   describe("Garden with fruit trees", function () {
       let myFruitTree;
 
       beforeEach(() => {
          myFruitTree = new FruitTree("Strawberry");
       });
 
-   
+
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
          assert.isAbove(myGarden.fruitTrees.length, 0);
@@ -35,18 +35,21 @@ describe("Garden tests", function () {
          assert.isAtMost(myGarden.fruitTrees.length, 5);
       });
    });
-   describe("Garden with vegetable plants", function(){
+
+   describe("Garden with vegetable plants", function () {
       let myVegetablePlant;
       beforeEach(() => {
          myVegetablePlant = new VegetablePlant("Cabbage");
       });
 
-      it("should be able to add vegetables", function() {
-         
-       });
+      it("should be able to add vegetables", function () {
+
+      });
    })
 });
 
 /*
-   Result from previous above.
+   Let's begin implementing this new test case.
+   This is simlar to the `"should be able to add fruit trees"` test case.
+   Add `myVegetablePlant` to `myGarden` in the `"should be able to add vegetables trees"` test case.
 */

@@ -41,10 +41,22 @@ describe("Garden tests", function () {
       beforeEach(() => {
          myVegetablePlant = new VegetablePlant("Cabbage");
       });
+
+      it("should be able to add vegetables", function () {
+         myGarden.addPlant(myVegetablePlant);
+         assert.isAbove(myGarden.vegetablePlants.length, 0);
+      });
+
+      it("should not allow more than 10 vegetable plants", function () {
+         for (let i = 0; i < 11; i++) {
+            myGarden.addPlant(myVegetablePlant);
+         }
+         assert.isAtMost(myGarden.vegetablePlants.length, 10);
+      });
    })
 });
 
 /*
-   Now, let's create a test case where the `Garden` should be able to add vegetable plants.
-   Define the test case with the string `"should be able to add vegetables"` and pass in an empty function.
+   You're doing great! We only have the `Plant` object left to test against for the `Garden` object.
+   Import `Plant` from the `Plant.js` file in `src`.
 */
