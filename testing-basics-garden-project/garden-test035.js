@@ -1,4 +1,5 @@
 import { Garden } from "../src/Garden";
+import { Plant } from "../src/Plant";
 import { FruitTree } from "../src/FruitTree";
 import { VegetablePlant } from "../src/VegetablePlant";
 const chai = require("chai");
@@ -43,13 +44,33 @@ describe("Garden tests", function () {
       });
 
       it("should be able to add vegetables", function () {
+         myGarden.addPlant(myVegetablePlant);
+         assert.isAbove(myGarden.vegetablePlants.length, 0);
+      });
 
+      it("should not allow more than 10 vegetable plants", function () {
+         for (let i = 0; i < 11; i++) {
+            myGarden.addPlant(myVegetablePlant);
+         }
+         assert.isAtMost(myGarden.vegetablePlants.length, 10);
       });
    })
+
+   describe("Garden with other plants", function () {
+      let myPlant;
+      beforeEach(() => {
+         myPlant = new Plant("Sunflower");
+      });
+
+      it("should be able to add other plants", function () {
+         myGarden.addPlant(myPlant);
+         assert.isAbove(myGarden.miscPlants.length, 0);
+      });
+   });
 });
 
 /*
-   Let's begin implementing this new test case.
-   This is simlar to the `"should be able to add fruit trees"` test case.
-   Add `myVegetablePlant` to `myGarden` in the `"should be able to add vegetables"` test case.
+   Last test case to implement for the `Garden` object!
+   Create a test case where the `Garden` should not allow more than 7 other plants
+   Define the test case with the string `"should now allow more than 7 other plants"` and pass in an empty function.
 */

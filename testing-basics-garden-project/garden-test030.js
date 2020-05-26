@@ -61,7 +61,4 @@ describe("Garden tests", function () {
    });
 });
 
-/*
-   We can start organizing our last set of tests for the `Garden` object with a describe block!
-   Add a describe block under the `"Garden with vegetable plants"` block called `"Garden with other plants"` and pass in an empty function.
-*/
+// Inside our new `describe` block, declare a variable `myPlant` and assign it to a new `Plant` with `"Sunflower"` as a parameter.

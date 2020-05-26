@@ -51,6 +51,6 @@ describe("Garden tests", function () {
 
 /*
    Good job! We implemented that test case.
-   Now, let's create a test case where the `Garden` should now alllow more than 10 vegetable plants
+   Now, let's create a test case where the `Garden` should not allow more than 10 vegetable plants
    Define the test case with the string `"should now allow more than 10 vegetable plants"` and pass in an empty function.
 */

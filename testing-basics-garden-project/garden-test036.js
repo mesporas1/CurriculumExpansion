@@ -1,4 +1,5 @@
 import { Garden } from "../src/Garden";
+import { Plant } from "../src/Plant";
 import { FruitTree } from "../src/FruitTree";
 import { VegetablePlant } from "../src/VegetablePlant";
 const chai = require("chai");
@@ -37,8 +38,41 @@ describe("Garden tests", function () {
    });
 
    describe("Garden with vegetable plants", function () {
-      let myVegetablePlant = new VegetablePlant("Cabbage");
+      let myVegetablePlant;
+      beforeEach(() => {
+         myVegetablePlant = new VegetablePlant("Cabbage");
+      });
+
+      it("should be able to add vegetables", function () {
+         myGarden.addPlant(myVegetablePlant);
+         assert.isAbove(myGarden.vegetablePlants.length, 0);
+      });
+
+      it("should not allow more than 10 vegetable plants", function () {
+         for (let i = 0; i < 11; i++) {
+            myGarden.addPlant(myVegetablePlant);
+         }
+         assert.isAtMost(myGarden.vegetablePlants.length, 10);
+      });
    })
+
+   describe("Garden with other plants", function () {
+      let myPlant;
+      beforeEach(() => {
+         myPlant = new Plant("Sunflower");
+      });
+
+      it("should be able to add other plants", function () {
+         myGarden.addPlant(myPlant);
+         assert.isAbove(myGarden.miscPlants.length, 0);
+      });
+
+      it("should not allow more than 7 other plants", function () {
+
+      });
+   });
 });
 
-// Great! Let's add a `beforeEach` hook to set up the `myVegetablePlant` variable for each test case in the `"Garden with vegetable plants"` tests
+/*
+   Result from previous above.
+*/

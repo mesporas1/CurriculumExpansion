@@ -41,6 +41,4 @@ describe("Garden tests", function () {
    })
 });
 
-/*
-   Inside our new `describe` block, declare a variable `myVegetablePlant` and assign it to a new `VegetablePlant` with `"Cabbage"` as a parameter.
-*/
+// Inside our new `describe` block, declare a variable `myVegetablePlant` and assign it to a new `VegetablePlant` with `"Cabbage"` as a parameter.
