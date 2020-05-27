@@ -22,11 +22,10 @@ describe("Garden tests", function () {
          myFruitTree = new FruitTree("Strawberry");
       });
 
-
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
          assert.isAbove(myGarden.fruitTrees.length, 0);
-      })
+      });
 
       it("should not allow more than 5 fruit trees", function () {
          for (let i = 0; i < 6; i++) {
@@ -46,7 +45,7 @@ describe("Garden tests", function () {
          myGarden.addPlant(myVegetablePlant);
          assert.isAbove(myGarden.vegetablePlants.length, 0);
       });
-   })
+   });
 });
 
 /*

@@ -13,13 +13,13 @@ describe("Garden tests", function () {
    it("should be able to add fruit trees", function () {
       myGarden.addPlant(myFruitTree);
       assert.isAbove(myGarden.fruitTrees.length, 0);
-   })
+   });
 
    it("should not allow more than 5 fruit trees", function () {
    });
 });
 
-/* 
+/*
   Now that we have the test, let's implement it.
   Write a for loop that adds more than 5 `myFruitTree` objects to `myGarden`.
 */

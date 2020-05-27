@@ -18,7 +18,6 @@ describe("Garden tests", function () {
 
    describe("Garden with fruit trees", function () {
       let myFruitTree;
-
       beforeEach(() => {
          myFruitTree = new FruitTree("Strawberry");
       });
@@ -54,9 +53,25 @@ describe("Garden tests", function () {
          assert.isAtMost(myGarden.vegetablePlants.length, 10);
       });
    });
+
+   describe("Garden with other plants", function () {
+      let myPlant;
+      beforeEach(() => {
+         myPlant = new Plant("Sunflower");
+      });
+
+      it("should be able to add other plants", function () {
+         myGarden.addPlant(myPlant);
+         assert.isAbove(myGarden.miscPlants.length, 0);
+      });
+
+      it("should not allow more than 7 other plants", function () {
+         for (let i = 0; i < 8; i++) {
+            myGarden.addPlant(myPlant);
+         }
+         assert.isAtMost(myGarden.miscPlants.length, 7);
+      });
+   });
 });
 
-/*
-   We can start organizing our last set of tests for the `Garden` object with a describe block!
-   Add a describe block under the `"Garden with vegetable plants"` block called `"Garden with other plants"` and pass in an empty function.
-*/
+// Congrats you implemented the `Garden` tests!

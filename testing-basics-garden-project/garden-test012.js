@@ -13,10 +13,10 @@ describe("Garden tests", function () {
    it("should be able to add fruit trees", function () {
       myGarden.addPlant(myFruitTree);
       assert.isAbove(myGarden.fruitTrees.length, 0);
-   })
+   });
 });
 
-/*  
+/*
   Congrats! You have now made two test cases!
   Let's create another test case called `"should not allow more than 5 fruit trees"`.
   This will correspond to the next requirement.

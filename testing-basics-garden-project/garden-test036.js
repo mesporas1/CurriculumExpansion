@@ -18,16 +18,14 @@ describe("Garden tests", function () {
 
    describe("Garden with fruit trees", function () {
       let myFruitTree;
-
       beforeEach(() => {
          myFruitTree = new FruitTree("Strawberry");
       });
 
-
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
          assert.isAbove(myGarden.fruitTrees.length, 0);
-      })
+      });
 
       it("should not allow more than 5 fruit trees", function () {
          for (let i = 0; i < 6; i++) {
@@ -54,7 +52,7 @@ describe("Garden tests", function () {
          }
          assert.isAtMost(myGarden.vegetablePlants.length, 10);
       });
-   })
+   });
 
    describe("Garden with other plants", function () {
       let myPlant;
@@ -73,6 +71,4 @@ describe("Garden tests", function () {
    });
 });
 
-/*
-   Result from previous above.
-*/
+// Write a for loop that adds more than 7 `myPlant` objects to `myGarden`.

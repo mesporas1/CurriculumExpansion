@@ -12,10 +12,10 @@ describe("Garden tests", function () {
 
    it("should be able to add fruit trees", function () {
       myGarden.addPlant(myFruitTree);
-   })
+   });
 });
 
-/*  
+/*
   Great! Now that we added `myFruitTree` to `myGarden`, we can write a test to make sure it's working.
   We can do this using the `isAbove` assert method from Chai.
   The method works like this:

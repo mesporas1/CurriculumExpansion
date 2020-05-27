@@ -18,7 +18,6 @@ describe("Garden tests", function () {
 
    describe("Garden with fruit trees", function () {
       let myFruitTree;
-
       beforeEach(() => {
          myFruitTree = new FruitTree("Strawberry");
       });
@@ -54,9 +53,24 @@ describe("Garden tests", function () {
          assert.isAtMost(myGarden.vegetablePlants.length, 10);
       });
    });
+
+   describe("Garden with other plants", function () {
+      let myPlant;
+      beforeEach(() => {
+         myPlant = new Plant("Sunflower");
+      });
+
+      it("should be able to add other plants", function () {
+         myGarden.addPlant(myPlant);
+         assert.isAbove(myGarden.miscPlants.length, 0);
+      });
+
+      it("should not allow more than 7 other plants", function () {
+         for (let i = 0; i < 8; i++) {
+            myGarden.addPlant(myPlant);
+         }
+      });
+   });
 });
 
-/*
-   We can start organizing our last set of tests for the `Garden` object with a describe block!
-   Add a describe block under the `"Garden with vegetable plants"` block called `"Garden with other plants"` and pass in an empty function.
-*/
+// After the `for` loop, use the `isAtMost` method to write an assert statement that checks if the length of `miscPlants` in `myGarden` is at most 7

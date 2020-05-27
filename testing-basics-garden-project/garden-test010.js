@@ -12,10 +12,10 @@ describe("Garden tests", function () {
 
    it("should be able to add fruit trees", function () {
 
-   })
+   });
 });
 
-/*  
+/*
   Add `myFruitTree` to `myGarden` in the `"should be able to add fruit trees"` test case.
   NOTE: Check out how `FruitTrees` are added to `Garden`'s in the `Garden.js` file
-*/ 
+*/
