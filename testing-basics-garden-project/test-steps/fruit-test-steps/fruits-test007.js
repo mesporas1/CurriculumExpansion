@@ -10,4 +10,4 @@ describe("Fruit Tree Tests", function () {
     });
 });
 
-// Result from previous above.
+// Under the beforeEach block, write a test case for the fruit tree using `it` and use `"should be a fruit tree"` as the string describing the test and pass in an empty function.
