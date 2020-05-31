@@ -21,9 +21,14 @@ describe("Fruit Tree Tests", function () {
         myFruitTree.water();
         assert.strictEqual(myFruitTree.lastDayWatered, 0);
     });
+
+    it("can be neglected", function () {
+        myFruitTree.neglect();
+        assert.isAbove(myFruitTree.lastDayWatered, 0);
+    });
 });
 
 /*
-    The next requirement talks about neglecting a plant.
-    Create a test case with the string `"can be neglected"` and pass in an empty function.
+    Let's create another test case to verify what happens to our plant after 3 days of being neglected.
+    Create a test case with the string `"should wither after 3 days of being neglected"` and pass in an empty function.
 */

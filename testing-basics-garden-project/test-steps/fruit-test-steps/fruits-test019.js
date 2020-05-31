@@ -21,9 +21,26 @@ describe("Fruit Tree Tests", function () {
         myFruitTree.water();
         assert.strictEqual(myFruitTree.lastDayWatered, 0);
     });
+
+    it("can be neglected", function () {
+        myFruitTree.neglect();
+        assert.isAbove(myFruitTree.lastDayWatered, 0);
+    });
+
+    it("should wither after 3 days of being neglected", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        assert.isTrue(myFruitTree.withered);
+    });
+
+    it("should bear fruit", function () {
+
+    });
 });
 
 /*
-    The next requirement talks about neglecting a plant.
-    Create a test case with the string `"can be neglected"` and pass in an empty function.
+    Great! Now, we can add fruit to `myFruitTree`.
+    Check out how to add fruit to a `FruitTree` in the `FruitTree.js` file in the `src` directory.
+    Then, add fruit to `myFruitTree` in the `"should bear fruit"` test case.
 */

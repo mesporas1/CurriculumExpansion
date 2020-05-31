@@ -21,9 +21,14 @@ describe("Fruit Tree Tests", function () {
         myFruitTree.water();
         assert.strictEqual(myFruitTree.lastDayWatered, 0);
     });
+
+    it("can be neglected", function () {
+
+    });
 });
 
 /*
-    The next requirement talks about neglecting a plant.
-    Create a test case with the string `"can be neglected"` and pass in an empty function.
+    We must neglect our plant for this test case.
+    Check out how to `neglect` a `Plant` in the `Plant.js` file in the `src` directory.
+    Then, neglect `myFruitTree` in the `"can be neglected"` test case.
 */

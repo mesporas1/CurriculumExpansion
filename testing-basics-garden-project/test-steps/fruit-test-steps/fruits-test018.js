@@ -21,9 +21,22 @@ describe("Fruit Tree Tests", function () {
         myFruitTree.water();
         assert.strictEqual(myFruitTree.lastDayWatered, 0);
     });
+
+    it("can be neglected", function () {
+        myFruitTree.neglect();
+        assert.isAbove(myFruitTree.lastDayWatered, 0);
+    });
+
+    it("should wither after 3 days of being neglected", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        assert.isTrue(myFruitTree.withered);
+    });
 });
 
 /*
-    The next requirement talks about neglecting a plant.
-    Create a test case with the string `"can be neglected"` and pass in an empty function.
+    Good! We tested the `Plant` requirements for `FruitTree`.
+    Let's test the `FruitTree` specific requirements.
+    Create a test case with the string `"should bear fruit"` and pass in an empty function.
 */

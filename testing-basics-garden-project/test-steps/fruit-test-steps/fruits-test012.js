@@ -23,6 +23,6 @@ describe("Fruit Tree Tests", function () {
 });
 
 /*
-    Let's water `myFruitTree`. Check out how to `water` a `Plant` in the `Plant.js` in the `src` directory.
+    Let's water `myFruitTree`. Check out how to `water` a `Plant` in the `Plant.js` file in the `src` directory.
     Then, water `myFruitTree` in the `"should be watered"` test case.
 */
