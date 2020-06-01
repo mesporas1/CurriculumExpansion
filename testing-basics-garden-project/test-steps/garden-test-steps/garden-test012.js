@@ -11,11 +11,14 @@ describe("Garden tests", function () {
    });
 
    it("should be able to add fruit trees", function () {
-
-   })
+      myGarden.addPlant(myFruitTree);
+      assert.isAbove(myGarden.fruitTrees.length, 0);
+   });
 });
 
-/*  
-  Add `myFruitTree` to `myGarden` in the `"should be able to add fruit trees"` test case.
-  NOTE: Check out how `FruitTrees` are added to `Garden`'s in the `Garden.js` file
-*/ 
+/*
+  Congrats! You have now made two test cases!
+  Let's create another test case called `"should not allow more than 5 fruit trees"`.
+  This will correspond to the next requirement.
+  You don't need to implement the test yet.
+*/

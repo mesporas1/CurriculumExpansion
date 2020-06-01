@@ -13,14 +13,14 @@ describe("Garden tests", function () {
    it("should be able to create a Garden", function () {
       assert.instanceOf(myGarden, Garden);
    });
-   
-   describe("Garden with fruit trees", function(){
+
+   describe("Garden with fruit trees", function () {
       let myFruitTree = new FruitTree("Strawberry");
-   
+
       it("should be able to add fruit trees", function () {
          myGarden.addPlant(myFruitTree);
          assert.isAbove(myGarden.fruitTrees.length, 0);
-      })
+      });
 
       it("should not allow more than 5 fruit trees", function () {
          for (let i = 0; i < 6; i++) {
@@ -28,9 +28,9 @@ describe("Garden tests", function () {
          }
          assert.isAtMost(myGarden.fruitTrees.length, 5);
       });
-   }); 
+   });
 });
 
 /*
   Great! Let's add a `beforeEach` hook to set up the `myFruitTree` variable for each test case in the `"Garden with fruit trees"` tests
-*/ 
+*/

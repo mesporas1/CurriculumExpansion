@@ -4,12 +4,7 @@ const chai = require("chai");
 const assert = chai.assert;
 
 describe("Garden tests", function () {
-   let myGarden;
-
-   beforeEach(() => {
-      myGarden = new Garden();
-   });
-
+   let myGarden = new Garden();
    let myFruitTree = new FruitTree("Strawberry");
    it("should be able to create a Garden", function () {
       assert.instanceOf(myGarden, Garden);
@@ -18,7 +13,7 @@ describe("Garden tests", function () {
    it("should be able to add fruit trees", function () {
       myGarden.addPlant(myFruitTree);
       assert.isAbove(myGarden.fruitTrees.length, 0);
-   })
+   });
 
    it("should not allow more than 5 fruit trees", function () {
       for (let i = 0; i < 6; i++) {
@@ -29,14 +24,16 @@ describe("Garden tests", function () {
 });
 
 /*
-   Test blocks can be nested inside of other test blocks to better identify where problems may reside.
-   With our plane example, if I wanted to group `"Jet Plane Tests"` into `"Plane tests"`, I can write this:
-   ```
-      describe("Plane tests", function(){
-         describe("Jet Plane tests", function(){
-            // Your test cases
-         })
-      })
-   ```
-   Create a test block inside of `"Garden tests"` called  `"Garden with fruit trees"` with your fruit tree test cases.
+  Our tests pass, but they are not independent of other tests.
+  This can cause problems for future tests.
+  We can set up what happens before each test using the `beforeEach` hook.
+  Just below your `myGarden` variable, use `beforeEach` to set up the `myGarden` variable for every test case, for example:
+  ```
+  describe("Tests", function(){
+    let Plane
+    beforeEach(() => {
+      Plane = new Plane()
+    })
+  })
+  ```
 */

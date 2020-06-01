@@ -12,14 +12,14 @@ describe("Garden tests", function () {
 
    it("should be able to add fruit trees", function () {
       myGarden.addPlant(myFruitTree);
-   })
+      assert.isAbove(myGarden.fruitTrees.length, 0);
+   });
+
+   it("should not allow more than 5 fruit trees", function () {
+      for (let i = 0; i < 6; i++) {
+         myGarden.addPlant(myFruitTree);
+      }
+   });
 });
 
-/*  
-  Great! Now that we added `myFruitTree` to `myGarden`, we can write a test to make sure it's working.
-  We can do this using the `isAbove` assert method from Chai.
-  The method works like this:
-  `assert.isAbove(a, 2) // Checks if a > 2`
-  Write an assert using `isAbove` to check if the `FruitTree` was added to the `Garden`.
-  The assert should check if the length of `fruitTrees` in `myGarden` is greater than 0.
-*/
+// After the `for` loop, use the `isAtMost` method to write an assert statement that checks if the length of `fruitTrees` in `myGarden` is at most 5.
