@@ -41,7 +41,5 @@ describe("Fruit Tree Tests", function () {
 
 /*
     We can check if fruit has been added to `myFruitTree` by checking the `numFruits` property.
-    Now, we can use chai's `equal` method to check if `numFruits` is `1` after adding a fruit for the first time.
-    The `equal` method is like the `strictEqual` method except it does not check for strict equality.
     Write an `assert` statement checking if the `numFruits` property of `myFruitTree` is equal to `1`.
 */

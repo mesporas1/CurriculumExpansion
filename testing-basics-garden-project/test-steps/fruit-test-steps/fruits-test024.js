@@ -48,5 +48,5 @@ describe("Fruit Tree Tests", function () {
 /*
     Let's store the number of harvested fruits to our new variable.
     Check out how to harvest fruit from a `FruitTree` in the `FruitTree.js` file in the `src` directory.
-    Then, set the number of harvested fruits to the `numHarvestedFruits` variable
+    Then, set the number of harvested fruits to the `numHarvestedFruits` variable.
 */
