@@ -34,13 +34,9 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
-    it("should produce vegetables", function () {
+    it("should recover after being watered", function () {
 
     });
 });
 
-/*
-    Great! Now, we can add vegetables to `myVegetablePlant`.
-    Check out how to add vegetables to a `VegetablePlant` in the `VegetablePlant.js` file in the `src` directory.
-    Then, add vegetables to `myVegetablePlant` in the `"should produce vegetables"` test case.
-*/
+// In our new test case, write a for loop that neglects `myVegetablePlant` for 3 days.

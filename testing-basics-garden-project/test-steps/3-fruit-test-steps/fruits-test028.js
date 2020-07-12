@@ -31,10 +31,30 @@ describe("Fruit Tree Tests", function () {
         for (let i = 0; i < 3; i++) {
             myFruitTree.neglect();
         }
+        assert.isTrue(myFruitTree.withered);
+    });
+
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        myFruitTree.water();
+        assert.isFalse(myFruitTree.withered);
+    });
+
+    it("should bear fruit", function () {
+        myFruitTree.addFruit();
+        assert.equal(myFruitTree.numFruits, 1);
+    });
+
+    it("should return the number of fruits when harvested", function () {
+        myFruitTree.addFruit();
+        const numHarvestedFruits;
     });
 });
 
 /*
-    When a plant is withered, the `withered` property is set to the boolean `true`.
-    Write an `assert` statement checking if the `withered` property of `myFruitTree` is true.
+    Let's store the number of harvested fruits to our new variable.
+    Check out how to harvest fruit from a `FruitTree` in the `FruitTree.js` file in the `src` directory.
+    Then, set the number of harvested fruits to the `numHarvestedFruits` variable.
 */

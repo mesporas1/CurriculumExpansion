@@ -34,13 +34,9 @@ describe("Fruit Tree Tests", function () {
         assert.isTrue(myFruitTree.withered);
     });
 
-    it("should bear fruit", function () {
+    it("should recover after being watered", function () {
 
     });
 });
 
-/*
-    Great! Now, we can add fruit to `myFruitTree`.
-    Check out how to add fruit to a `FruitTree` in the `FruitTree.js` file in the `src` directory.
-    Then, add fruit to `myFruitTree` in the `"should bear fruit"` test case.
-*/
+// In our new test case, write a for loop that neglects `myFruitTree` for 3 days.

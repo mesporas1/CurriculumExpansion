@@ -34,17 +34,21 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
-    it("should produce vegetables", function () {
-        myVegetablePlant.addVegetable();
-        assert.equal(myVegetablePlant.numVegetables, 1);
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myVegetablePlant.neglect();
+        }
+        myVegetablePlant.water();
+        assert.isFalse(myVegetablePlant.withered);
     });
 
-    it("should return the number of vegetables harvested", function () {
-        myVegetablePlant.addVegetable();
+    it("should produce vegetables", function () {
+
     });
 });
 
 /*
-    Great! We need a variable to keep track of the number of vegetables.
-    Create a variable called `numVegetables`
+    Great! Now, we can add vegetables to `myVegetablePlant`.
+    Check out how to add vegetables to a `VegetablePlant` in the `VegetablePlant.js` file in the `src` directory.
+    Then, add vegetables to `myVegetablePlant` in the `"should produce vegetables"` test case.
 */

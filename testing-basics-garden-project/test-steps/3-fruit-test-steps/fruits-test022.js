@@ -34,14 +34,17 @@ describe("Fruit Tree Tests", function () {
         assert.isTrue(myFruitTree.withered);
     });
 
-    it("should bear fruit", function () {
-        myFruitTree.addFruit();
-        assert.equal(myFruitTree.numFruits, 1);
-    });
-
-    it("should return the number of fruits when harvested", function () {
-
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        myFruitTree.water();
+        assert.isFalse(myPlant.withered);
     });
 });
 
-// Add fruit to `myFruitTree` in the `"should return the number of fruits when harvested"` test case.
+/*
+    Good! We tested the `Plant` requirements for `FruitTree`.
+    Let's test the `FruitTree` specific requirements.
+    Create a test case with the string `"should bear fruit"` and pass in an empty function.
+*/

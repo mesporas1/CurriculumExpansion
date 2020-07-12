@@ -34,6 +34,14 @@ describe("Vegetable Plant Tests", function () {
     assert.isTrue(myVegetablePlant.withered);
   });
 
+  it("should recover after being watered", function () {
+    for (let i = 0; i < 3; i++) {
+      myVegetablePlant.neglect();
+    }
+    myVegetablePlant.water();
+    assert.isFalse(myVegetablePlant.withered);
+  });
+
   it("should produce vegetables", function () {
     myVegetablePlant.addVegetable();
     assert.equal(myVegetablePlant.numVegetables, 1);

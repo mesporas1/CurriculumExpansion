@@ -34,17 +34,21 @@ describe("Fruit Tree Tests", function () {
         assert.isTrue(myFruitTree.withered);
     });
 
-    it("should bear fruit", function () {
-        myFruitTree.addFruit();
-        assert.equal(myFruitTree.numFruits, 1);
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        myFruitTree.water();
+        assert.isFalse(myPlant.withered);
     });
 
-    it("should return the number of fruits when harvested", function () {
-        myFruitTree.addFruit();
+    it("should bear fruit", function () {
+
     });
 });
 
 /*
-    Great! We need a variable to keep track of the number of harvested fruits.
-    Create a variable called `numHarvestedFruits`
+    Great! Now, we can add fruit to `myFruitTree`.
+    Check out how to add fruit to a `FruitTree` in the `FruitTree.js` file in the `src` directory.
+    Then, add fruit to `myFruitTree` in the `"should bear fruit"` test case.
 */

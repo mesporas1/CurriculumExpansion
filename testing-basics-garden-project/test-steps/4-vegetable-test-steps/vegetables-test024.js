@@ -34,19 +34,20 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
-    it("should produce vegetables", function () {
-        myVegetablePlant.addVegetable();
-        assert.equal(myVegetablePlant.numVegetables, 1);
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myVegetablePlant.neglect();
+        }
+        myVegetablePlant.water();
+        assert.isFalse(myVegetablePlant.withered);
     });
 
-    it("should return the number of vegetables harvested", function () {
+    it("should produce vegetables", function () {
         myVegetablePlant.addVegetable();
-        const numVegetables;
     });
 });
 
 /*
-    Let's store the number of harvested vegetables to our new variable.
-    Check out how to harvest vegetables from a `VegetablePlant` in the `VegetablePlant.js` file in the `src` directory.
-    Then, set the number of harvested vegetables to the `numVegetables` variable.
+    We can check if vegetable has been added to `myVegetablePlant` by checking the `numVegetables` property.
+    Write an `assert` statement checking if the `numVegetables` property of `myVegetablePlant` is equal to `1`.
 */

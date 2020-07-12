@@ -36,6 +36,6 @@ describe("Plant Tests", function () {
 });
 
 /*
-    The last plant requirement is `"Plants need to be watered to recover"`.
+    The last plant requirement is `"The plants need to be watered to recover"`.
     Create a test case with the string `"should recover after being watered"` and pass in an empty function.
 */

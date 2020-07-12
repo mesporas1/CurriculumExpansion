@@ -19,6 +19,6 @@ describe("Fruit Tree Tests", function () {
 });
 
 /*
-    Good job! The next requirement is `"Plants need to be watered"`.
+    Good job! The next requirement is `"The plants need to be watered"`.
     Create a test case with the string `"should be watered"` and pass in an empty function.
 */

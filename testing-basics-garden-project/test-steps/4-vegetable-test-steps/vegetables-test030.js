@@ -41,10 +41,17 @@ describe("Vegetable Plant Tests", function () {
         myVegetablePlant.water();
         assert.isFalse(myVegetablePlant.withered);
     });
+
+    it("should produce vegetables", function () {
+        myVegetablePlant.addVegetable();
+        assert.equal(myVegetablePlant.numVegetables, 1);
+    });
+
+    it("should return the number of vegetables harvested", function () {
+        myVegetablePlant.addVegetable();
+        const numVegetables = myVegetablePlant.harvest();
+        assert.equal(numVegetables, 1);
+    });
 });
 
-/*
-    Good! We tested the `Plant` requirements for `VegetablePlant`.
-    Let's test the `VegetablePlant` specific requirements.
-    Create a test case with the string `"should produce vegetables"` and pass in an empty function.
-*/
+// Congrats you implemented the `VegetablePlant` tests!

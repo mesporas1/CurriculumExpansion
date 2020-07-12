@@ -34,12 +34,14 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
-    it("should produce vegetables", function () {
-        myVegetablePlant.addVegetable();
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myVegetablePlant.neglect();
+        }
     });
 });
 
 /*
-    We can check if vegetable has been added to `myVegetablePlant` by checking the `numVegetables` property.
-    Write an `assert` statement checking if the `numVegetables` property of `myVegetablePlant` is equal to `1`.
+    Let's water `myPlant` so that the plant can recover from its neglected state.
+    Water `myPlant` after the for loop.
 */

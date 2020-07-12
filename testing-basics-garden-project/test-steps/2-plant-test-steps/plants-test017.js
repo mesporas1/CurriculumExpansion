@@ -36,5 +36,8 @@ describe("Plant Tests", function () {
 
 /*
     When a plant is withered, the `withered` property is set to the boolean `true`.
+    We can assert if a value is true with chai's `isTrue` method,.
+    For example, if I create a variable `blueSky` and set it to `true`,
+    I can assert that `blueSky` is `true` with `assert.IsTrue(blueSky)`.
     Write an `assert` statement checking if the `withered` property of `myPlant` is true.
 */

@@ -34,16 +34,22 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myVegetablePlant.neglect();
+        }
+        myVegetablePlant.water();
+        assert.isFalse(myVegetablePlant.withered);
+    });
+
     it("should produce vegetables", function () {
         myVegetablePlant.addVegetable();
         assert.equal(myVegetablePlant.numVegetables, 1);
     });
 
     it("should return the number of vegetables harvested", function () {
-        myVegetablePlant.addVegetable();
-        const numVegetables = myVegetablePlant.harvest();
-        assert.equal(numVegetables, 1);
+
     });
 });
 
-// Congrats you implemented the `VegetablePlant` tests!
+// Add vegetables to `myVegetablePlant` in the `"should return the number of vegetables harvested"` test case.

@@ -39,4 +39,4 @@ describe("Plant Tests", function () {
     });
 });
 
-// In our new test case, write a for loop that neglects `myVegetablePlant` for 3 days.
+// In our new test case, write a for loop that neglects `myPlant` for 3 days.

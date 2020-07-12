@@ -41,10 +41,18 @@ describe("Vegetable Plant Tests", function () {
         myVegetablePlant.water();
         assert.isFalse(myVegetablePlant.withered);
     });
+
+    it("should produce vegetables", function () {
+        myVegetablePlant.addVegetable();
+        assert.equal(myVegetablePlant.numVegetables, 1);
+    });
+
+    it("should return the number of vegetables harvested", function () {
+        myVegetablePlant.addVegetable();
+    });
 });
 
 /*
-    Good! We tested the `Plant` requirements for `VegetablePlant`.
-    Let's test the `VegetablePlant` specific requirements.
-    Create a test case with the string `"should produce vegetables"` and pass in an empty function.
+    Great! We need a variable to keep track of the number of vegetables.
+    Create a variable called `numVegetables`
 */

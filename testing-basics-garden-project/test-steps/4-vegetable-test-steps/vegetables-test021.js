@@ -34,14 +34,15 @@ describe("Vegetable Plant Tests", function () {
         assert.isTrue(myVegetablePlant.withered);
     });
 
-    it("should produce vegetables", function () {
-        myVegetablePlant.addVegetable();
-        assert.equal(myVegetablePlant.numVegetables, 1);
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myVegetablePlant.neglect();
+        }
+        myVegetablePlant.water();
     });
 });
 
 /*
-    Good! We tested if our `VegetablePlant` can produce vegetables.
-    Let's test for the last requirement!
-    Create a test case with the string `"should return the number of vegetables harvested"` and pass in an empty function.
+    When a plant is watered, the `withered` property is set to the boolean `false`.
+    Write an `assert` statement checking if the `withered` property of `myPlant` is false.
 */

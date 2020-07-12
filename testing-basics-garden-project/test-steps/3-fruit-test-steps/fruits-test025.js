@@ -34,18 +34,22 @@ describe("Fruit Tree Tests", function () {
         assert.isTrue(myFruitTree.withered);
     });
 
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
+        myFruitTree.water();
+        assert.isFalse(myFruitTree.withered);
+    });
+
     it("should bear fruit", function () {
         myFruitTree.addFruit();
         assert.equal(myFruitTree.numFruits, 1);
     });
-
-    it("should return the number of fruits when harvested", function () {
-        myFruitTree.addFruit();
-        const numHarvestedFruits = myFruitTree.harvest();
-    });
 });
 
 /*
-    Since we added only one fruit to our `FruitTree`, we know that `numHarvestedFruits` is equal to `1`.
-    Write an `assert` statement checking if the `numHarvestedFruits` property of `myFruitTree` is equal to `1`.
+    Good! We tested if our `FruitTree` can bear fruit.
+    Let's test for the last requirement!
+    Create a test case with the string `"should return the number of fruits when harvested"` and pass in an empty function.
 */

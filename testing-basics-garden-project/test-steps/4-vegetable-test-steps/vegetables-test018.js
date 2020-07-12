@@ -36,7 +36,6 @@ describe("Vegetable Plant Tests", function () {
 });
 
 /*
-    Good! We tested the `Plant` requirements for `VegetablePlant`.
-    Let's test the `VegetablePlant` specific requirements.
-    Create a test case with the string `"should produce vegetables"` and pass in an empty function.
+    The last plant requirement is `"The plants need to be watered to recover"`.
+    Create a test case with the string `"should recover after being watered"` and pass in an empty function.
 */

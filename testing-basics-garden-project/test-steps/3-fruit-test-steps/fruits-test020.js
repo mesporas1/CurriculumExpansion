@@ -34,12 +34,14 @@ describe("Fruit Tree Tests", function () {
         assert.isTrue(myFruitTree.withered);
     });
 
-    it("should bear fruit", function () {
-        myFruitTree.addFruit();
+    it("should recover after being watered", function () {
+        for (let i = 0; i < 3; i++) {
+            myFruitTree.neglect();
+        }
     });
 });
 
 /*
-    We can check if fruit has been added to `myFruitTree` by checking the `numFruits` property.
-    Write an `assert` statement checking if the `numFruits` property of `myFruitTree` is equal to `1`.
+    Let's water `myFruitTree` so that the plant can recover from its neglected state.
+    Water `myFruitTree` after the for loop.
 */
